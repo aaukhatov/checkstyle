@@ -9,8 +9,6 @@
       https://www.oracle.com/technetwork/java/codeconvtoc-136057.html
     - the Javadoc guidelines at
       https://www.oracle.com/technetwork/articles/java/index-137868.html
-    - some best practices from Mobile TeleSystems PJSC (or Ngenie) at
-      http://ngenie.mtsit.com/ (link to NDC)
   Checkstyle is very configurable. Be sure to read the documentation at
   http://checkstyle.sf.net (or in your downloaded distribution).
   Most Checks are configurable, be sure to consult the documentation.
@@ -31,15 +29,6 @@
     <module name="Header">
         <property name="ignoreLines" value="4,5,6,7,8,9,10,11,12,13"/>
     </module>
-
-    <module name="RegexpHeader">
-        <!-- TODO: Необходимо доработать чтобы полный текст проверить. -->
-        <property name="header" value="^\/\*{2}$\n^\s\* \(c\) 201\d Mobile TeleSystems PJSC, Russia$\nAll Rights Reserved.$" />
-        <property name="fileExtensions" value="java" />
-        <message key="header.mismatch" value="No license" />
-        <message key="header.missing" value="No license" />
-    </module>
-    
 
     <module name="FileTabCharacter">
         <property name="eachLine" value="true"/>
