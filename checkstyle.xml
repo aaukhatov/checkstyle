@@ -30,6 +30,15 @@
         <property name="ignoreLines" value="4,5,6,7,8,9,10,11,12,13"/>
     </module>
 
+<!--
+    <module name="RegexpHeader">
+        <property name="header" value="" />
+        <property name="fileExtensions" value="java" />
+        <message key="header.mismatch" value="No license" />
+        <message key="header.missing" value="No license" />
+    </module>
+-->
+
     <module name="FileTabCharacter">
         <property name="eachLine" value="true"/>
     </module>
@@ -43,7 +52,6 @@
         <!-- Checks for Javadoc comments. -->
         <!-- See http://checkstyle.sf.net/config_javadoc.html -->
         <module name="JavadocTagContinuationIndentation"/>
-        <module name="JavadocParagraph"/>
         <module name="AtclauseOrder">
             <property name="tagOrder" value="@param, @return, @throws, @deprecated"/>
             <property name="target" value="CLASS_DEF, INTERFACE_DEF, ENUM_DEF, METHOD_DEF, CTOR_DEF, VARIABLE_DEF"/>
@@ -54,15 +62,20 @@
             <property name="allowMissingThrowsTags" value="true"/>
             <property name="allowMissingReturnTag" value="true"/>
             <property name="minLineCount" value="2"/>
-            <property name="allowedAnnotations" value="Override, Test"/>
+            <property name="allowedAnnotations" value="Override, Test, Bean, ApiOperation, ExceptionHandler, ApiModelProperty"/>
             <property name="allowThrowsTagsForSubclasses" value="true"/>
         </module>
-        <module name="JavadocType"/>
+        <module name="JavadocType">
+            <property name="allowedAnnotations" value="SpringBootApplication, Configuration, Bean, ApiModel"/>
+        </module>
         <module name="JavadocVariable">
             <property name="scope" value="public"/>
             <property name="ignoreNamePattern" value="log|logger"/>
         </module>
-        <module name="JavadocStyle"/>
+        <module name="JavadocStyle">
+            <property name="scope" value="public"/>
+            <property name="checkFirstSentence" value="false"/>
+        </module>
 
 
         <!-- Checks for Naming Conventions. -->
@@ -133,10 +146,11 @@
             <property name="processJavadoc" value="true"/>
         </module>
         <module name="ImportOrder">
-            <property name="groups" value="java,/^javax?\./,ru.org.equip,*"/>
+            <property name="groups" value="java,/^javax?\./,*"/>
             <property name="ordered" value="true"/>
             <property name="separated" value="true"/>
-            <property name="option" value="top"/>
+            <property name="option" value="bottom"/>
+            <property name="separatedStaticGroups" value="true"/>
             <property name="sortStaticImportsAlphabetically" value="true"/>
         </module>
 
@@ -148,7 +162,7 @@
             <property name="ignorePattern" value="^ *\* *[^ ]+$|^package.*|^import.*"/>
         </module>
         <module name="MethodLength">
-            <property name="max" value="25"/>
+            <property name="max" value="50"/>
         </module>
         <module name="NestedIfDepth">
             <property name="max" value="3"/>
@@ -174,7 +188,7 @@
         <module name="OperatorWrap">
             <property name="option" value="NL"/>
             <property name="tokens"
-                      value="BAND, BOR, BSR, BXOR, DIV, EQUAL, GE, GT, LAND, LE, LITERAL_INSTANCEOF, LOR, LT, MINUS, MOD, NOT_EQUAL, PLUS, QUESTION, SL, SR, STAR "/>
+                      value="BAND, BOR, BSR, BXOR, DIV, EQUAL, GE, GT, LAND, LE, LITERAL_INSTANCEOF, LOR, LT, MINUS, MOD, NOT_EQUAL, QUESTION, SL, SR, STAR "/>
         </module>
         <module name="NoLineWrap"/>
         <module name="WhitespaceAround">
