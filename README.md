@@ -2,7 +2,9 @@
 
 ## Intro
 
-Правила описываются с помощью плагина Checkstyle [http://checkstyle.sf.net/](http://checkstyle.sf.net/).
+The following list offers practical advices that will help you write better Java code.
+
+These rules has been written on Checkstyle [http://checkstyle.sf.net/](http://checkstyle.sf.net/).
 
 Для соблюдения всеми разработчиками **Coding Style**, необходимо **включить проверку на стадию Continuous Integration** с помощью плагинов:
 
