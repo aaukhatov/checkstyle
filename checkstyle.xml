@@ -19,8 +19,7 @@
 <module name="Checker">
     <property name="charset" value="UTF-8"/>
 
-    <!-- TODO: В перспективе должно быть ERROR -->
-    <property name="severity" value="warning"/>
+    <property name="severity" value="error"/>
 
     <property name="fileExtensions" value="java"/>
 
