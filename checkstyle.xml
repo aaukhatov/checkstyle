@@ -59,7 +59,6 @@
             <property name="scope" value="public"/>
             <property name="allowMissingParamTags" value="true"/>
             <property name="allowMissingReturnTag" value="true"/>
-            <property name="minLineCount" value="2"/>
             <property name="allowedAnnotations" value="Override, Test, Bean, ApiOperation, ExceptionHandler, ApiModelProperty"/>
         </module>
         <module name="JavadocType">
