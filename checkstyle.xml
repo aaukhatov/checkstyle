@@ -61,6 +61,9 @@
             <property name="allowMissingReturnTag" value="true"/>
             <property name="allowedAnnotations" value="Override, Test, Bean, ApiOperation, ExceptionHandler, ApiModelProperty"/>
         </module>
+        <module name="MissingJavadocMethod">
+            <property name="minLineCount" value="2"/>
+        </module>
         <module name="JavadocType">
             <property name="allowedAnnotations" value="SpringBootApplication, Configuration, Bean, ApiModel"/>
         </module>
